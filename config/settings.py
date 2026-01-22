@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'news',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'  # URL для доступа
 STATICFILES_DIRS = [BASE_DIR / 'static']  # папка для файлов в проекте
 STATIC_ROOT = BASE_DIR / 'staticfiles'   # папка для сборки статики (для продакшена)
+
+# media settings
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

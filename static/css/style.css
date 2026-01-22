@@ -157,6 +157,13 @@ button.statement:active {
 .advantages h2 {
     margin-bottom: 35px; /* отступ от заголовка до карточек */
 }
+.card-img-top {
+    width: 100%;       /* картинка растягивается по ширине карточки */
+    height: 200px;     /* фиксированная высота для всех карточек */
+    object-fit: cover; /* картинка заполняет блок, сохраняя пропорции, обрезается по центру */
+    object-position: center center; /* центрируем картинку при обрезке */
+}
+
 
 .points {
     display: flex;

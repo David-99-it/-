@@ -59,7 +59,30 @@
         </div>
     </div>
 </div>
-<div class="last_news">
-    <h2>ПОСЛЕДНИЕ НОВОСТИ</h2>
-</div>
+<section class="container my-5">
+  <h2 class="text-center mb-4">ПОСЛЕДНИЕ НОВОСТИ</h2>
+
+  <div class="row">
+    {% for news in last_news %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          {% if news.image %}
+            <img src="{{ news.image.url }}" class="card-img-top" alt="{{ news.title }}">
+        {% endif %}
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ news.title }}</h5>
+            <p class="text-muted">{{ news.created_at|date:"d.m.Y" }}</p>
+
+            <a href="{% url 'news_detail' news.pk %}" class="btn btn-primary mt-2">
+              Читать подробнее
+            </a>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-center">Новостей пока нет</p>
+    {% endfor %}
+  </div>
+</section>
+
 {% endblock %}
