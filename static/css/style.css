@@ -1,0 +1,245 @@
+/* Hero секция прямо под navbar */
+.hero-image {
+    width: 100%;
+    height: 50vh;                     /* занимает половину экрана */
+    background-image: url('../img/Студенты2.jpg'); /* путь к картинке */
+    background-size: cover;           /* картинка растягивается */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;     /* параллакс */
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;                 /* без скругления, можно оставить */
+    box-shadow: none;                 /* без тени */
+}
+.back{
+   background-color: #f2f2f2; /* светло-сероватый */
+    padding-bottom: 50px;
+}
+
+.h2_1{
+    text-align: center;
+    color: #2D405C;
+    font-weight: bold;
+}
+.mission_and_img {
+    display: flex;
+    flex-direction: row;         /* текст слева, картинка справа на больших экранах */
+    align-items: stretch;        /* растягиваем элементы по высоте */
+    justify-content: center;
+    gap: 40px;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.mission {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mission p{
+    color: #2D405C;
+}
+
+.image_block {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  /* картинка справа на десктопе */
+}
+
+.image_block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* --- Адаптив для планшетов и телефонов --- */
+@media (max-width: 992px) {
+    .mission_and_img {
+        gap: 30px;
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission_and_img {
+        flex-direction: column;   /* вертикально */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .mission {
+        width: 90%;               /* почти всю ширину экрана */
+        padding: 20px;
+    }
+
+    .image_block {
+        width: 90%;
+        justify-content: center;  /* картинка по центру */
+    }
+
+    .image_block img {
+        width: 100%;              /* картинка адаптируется по ширине */
+        height: auto;
+    }
+}
+
+/* Затемнение для текста */
+.hero-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 64, 92, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Текст на картинке */
+.hero-text {
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Базовый стиль кнопки */
+button.statement {
+    background-color: #FFD700;   /* насыщенный жёлтый */
+    color: #2D2D2D;              /* тёмный текст */
+    border: none;                /* убираем стандартную границу */
+    border-radius: 8px;          /* скруглённые углы */
+    padding: 10px 25px;          /* внутренние отступы */
+    font-size: 1.1rem;           /* размер текста */
+    font-weight: bold;
+    cursor: pointer;             /* курсор при наведении */
+    transition: all 0.3s ease;  /* плавный переход всех свойств */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* лёгкая тень */
+}
+
+/* Эффект при наведении */
+button.statement:hover {
+    background-color: #FFE135;   /* светлее жёлтый */
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.6); /* яркое свечение */
+    transform: translateY(-2px); /* лёгкий подъём */
+}
+
+/* Эффект при нажатии */
+button.statement:active {
+    background-color: #FFC107;   /* тёмный оттенок жёлтого */
+    box-shadow: 0 3px 6px rgba(255, 193, 7, 0.5); /* уменьшенная тень */
+    transform: scale(0.98);      /* лёгкое уменьшение */
+}
+.advantages {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 4%;
+}
+.advantages h2 {
+    margin-bottom: 35px; /* отступ от заголовка до карточек */
+}
+
+.points {
+    display: flex;
+    flex-wrap: wrap;       /* чтобы карточки переносились на новую строку */
+    gap: 20px;             /* расстояние между карточками */
+    justify-content: center; /* центрируем сетку */
+}
+
+.point-card {
+    display: flex;         /* иконка + текст в строку */
+    align-items: flex-start; /* выравнивание по верхнему краю иконки */
+    gap: 10px;             /* расстояние между иконкой и текстом */
+    width: 350px;          /* ширина каждой “карточки” */
+    padding: 15px;
+    height: 150px;
+    background-color: #f5f5f5; /* цвет фона карточки */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* лёгкая тень */
+    text-align: left;      /* текст выравниваем по левому краю */
+}
+
+.point-card i {
+    color: #2D405C;        /* цвет иконки */
+    font-size: 30px;       /* размер иконки */
+    flex-shrink: 0;        /* иконка не сжимается */
+}
+
+.point-card h5 {
+    margin: 0;             /* убираем лишние отступы */
+    font-size: 22px;
+}
+
+/* Сначала скрываем все элементы hero-text */
+.hero-text h1,
+.hero-text p,
+.hero-text .statement {
+    opacity: 0;  /* полностью невидимы изначально */
+}
+
+/* Анимация вылета сверху */
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;              
+        transform: translateY(-100px); /* вылет сверху */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);      /* на месте */
+    }
+}
+
+/* Заголовок */
+.hero-text h1 {
+    animation: slideDownFade 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+/* Параграф с задержкой */
+.hero-text p {
+    animation: slideDownFade 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    animation-delay: 0.5s;
+}
+
+/* Кнопка с задержкой */
+.hero-text .statement {
+    animation: slideDownFade 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    animation-delay: 1s;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .hero-image { height: 45vh; }
+    .hero-text h1 { font-size: 2rem; }
+    .hero-text p { font-size: 1rem; }
+}
+
+@media (max-width: 768px) {
+    .hero-image { height: 40vh; }
+    .hero-text h1 { font-size: 1.7rem; }
+    .hero-text p { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-image { height: 35vh; }
+    .hero-text h1 { font-size: 1.5rem; }
+    .hero-text p { font-size: 0.8rem; }
+}

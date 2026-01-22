@@ -1,7 +1,65 @@
 {% extends 'main/layout.html' %}
-{% block title %}
- Главная
-{% endblock %}
-{% block content %}
+{% load static %}
 
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="back">
+<div class="hero-image">
+    <div class="overlay">
+        <div class="hero-text">
+            <h1 class="h1_1">Добро пожаловать на сайт МУЦА</h1>
+            <p>International University of Central Asia</p>
+    <button class="statement">Подать заявление</button>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="mission_and_img">
+<div class="mission">
+  <h2 class="h2_1">МИССИЯ МУЦА</h2><br><br>
+
+  <p>Международный университет в Центральной Азии создан на основе американской модели высшего образования, формирующей ярких высокообразованных лидеров современного демократического общества.</p>
+  <p>Основополагающими <b>принципами</b> университета являются <b>академическая честность</b> и <b>академическая свобода</b>. Университет зарекомендовал себя как проводник интеллектуальной свободы и безопасной, свободной от коррупции среды.</p>
+  <p><b>Миссия</b> университета направлена на формирование глобально мыслящих ответственных лидеров, приверженных честности, способных интегрировать свои личные и профессиональные навыки в целях служения обществу</p>
+</div>
+  <div class="image_block">
+    <img src="{% static 'img/Шапка_знания.webp' %}">
+</div>
+
+</div>
+<div class="advantages">
+    <h2>ПРЕИМУЩЕСТВА МУЦА</h2>
+    <div class="points">
+        <div class="point-card">
+            <i class="bi bi-star"></i>
+            <h5>Политика академической свободы и академической честности</h5>
+        </div>
+        <div class="point-card">
+            <i class="bi bi-star"></i>
+            <h5>Высокий качественный уровень профессорско-преподавательского состава</h5>
+        </div>
+        <div class="point-card">
+            <i class="bi bi-star"></i>
+            <h5>Вклад в региональное развитие</h5>
+        </div>
+        <div class="point-card">
+            <i class="bi bi-star"></i>
+            <h5>Личностно-центрированный подход к обучению</h5>
+        </div>
+        <div class="point-card">
+            <i class="bi bi-star"></i>
+            <h5>Постоянная работа над улучшением инфраструктуры</h5>
+        </div>
+        <div class="point-card">
+            <i class="bi bi-star"></i>
+            <h5>Формирование социальной ответственности</h5>
+        </div>
+    </div>
+</div>
+<div class="last_news">
+    <h2>ПОСЛЕДНИЕ НОВОСТИ</h2>
+</div>
 {% endblock %}
