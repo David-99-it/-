@@ -12,6 +12,14 @@
     border-radius: 0;                 /* без скругления, можно оставить */
     box-shadow: none;                 /* без тени */
 }
+html {
+    scroll-behavior: smooth;
+}
+:target {
+    outline: 3px solid #FFD700;
+    border-radius: 10px;
+}
+
 /* Hero секция прямо под navbar */
 .hero1-image {
     width: 100%;
@@ -251,6 +259,92 @@ button.statement:active {
     animation-delay: 1s;
 }
 
+/* ===== СЕКЦИЯ НОВОСТЕЙ НА ВСЮ ШИРИНУ ===== */
+.news-section {
+    width: 100%;
+    padding: 0 4%; /* отступы слева и справа */
+    background-color: #f2f2f2;
+}
+
+/* Заголовок */
+.news-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2D405C;
+    font-weight: bold;
+}
+
+/* Сетка новостей */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Карточка */
+.news-card-inner {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover эффект */
+.news-card-inner:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Картинка */
+.news-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Тело карточки */
+.news-body {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Заголовок */
+.news-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2D405C;
+    margin-bottom: 10px;
+}
+
+/* Дата */
+.news-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+@media (max-width: 1200px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-section {
+        padding: 0 6%;
+    }
+}
 
 /* Адаптивность */
 @media (max-width: 992px) {
