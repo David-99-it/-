@@ -19,20 +19,64 @@ html {
     outline: 3px solid #FFD700;
     border-radius: 10px;
 }
+.hero2-image .hero-text {
+    padding-top: 100px; /* смещаем текст вниз */
+    text-align: center;
+}
+.hero1-image .hero-text .h1_2,
+.hero2-image .hero-text .h1_2 {
+    font-size: 60px;   /* размер текста */
+    color: white;      /* цвет текста */
+    margin: 0;         /* убираем дефолтные отступы h1 */
+}
 
 /* Hero секция прямо под navbar */
-.hero1-image {
+.hero2-image {
     width: 100%;
-    height: 50vh;                     /* занимает половину экрана */
-    background-image: url('../img/Новости1.jpg'); /* путь к картинке */
-    background-size: cover;           /* картинка растягивается */
+    height: 50vh;                              /* занимает половину экрана */
+    background-image: url('../img/Шляпы.webp'); /* путь к картинке */
+    background-size: cover;                     /* растягиваем картинку */
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;     /* параллакс */
+    background-attachment: fixed;              /* параллакс */
     position: relative;
     overflow: hidden;
-    border-radius: 0;                 /* без скругления, можно оставить */
-    box-shadow: none;                 /* без тени */
+    border-radius: 0;
+    box-shadow: none;
+}
+.hero2-image .overlay , .hero1-image .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 64, 92, 0.6); 
+    padding-top: 120px;  /* управляет положением текста */
+    text-align: center;
+}
+.gold-line {
+    height: 4px; /* толщина линии */
+    width: 75%; /* длина линии */
+    background-color: #FFB300; /* насыщенный тёмно-жёлтый */
+    border-radius: 3px; /* слегка скругленные края */
+    box-shadow: 0 0 8px #FFB300, 0 0 15px #FFB300; /* лёгкое свечение */
+    margin: 10px auto 30px; /* отступы сверху/снизу и центрирование */
+}
+
+
+/* Hero блок "О МУЦА" */
+.hero1-image {
+    width: 100%;
+    height: 50vh;                              /* занимает половину экрана */
+    background-image: url('../img/Новости1.jpg'); /* путь к картинке */
+    background-size: cover;                     /* растягиваем картинку */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;              /* параллакс */
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
 }
 .back{
    background-color: #f2f2f2; /* светло-сероватый */
@@ -54,9 +98,8 @@ html {
     max-width: 1200px;
 }
 
-.mission {
+.mission{
     flex: 1;
-    background-color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -68,19 +111,22 @@ html {
     color: #2D405C;
 }
 
-.image_block {
+.image_block, .image_block-1{
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;  /* картинка справа на десктопе */
 }
-
-.image_block img {
+.image_block img, .image_block-1 img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
 }
+.image_block-1 img {
+    height: 100%;
+}
+
 /* --- Адаптив для планшетов и телефонов --- */
 @media (max-width: 992px) {
     .mission_and_img {
@@ -143,7 +189,6 @@ html {
 .hero-text p {
     font-size: 1.2rem;
 }
-
 /* Базовый стиль кнопки */
 button.statement {
     background-color: #FFD700;   /* насыщенный жёлтый */
