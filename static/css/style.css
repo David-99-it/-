@@ -154,8 +154,13 @@ button.statement:active {
     background-color: #f2f2f2;
     padding: 4%;
 }
-.advantages h2 {
+.advantages h2, .container h2{
     margin-bottom: 35px; /* отступ от заголовка до карточек */
+    color: #2D405C;
+    font-weight: bold;
+}
+.advantages p{
+    color: #2D405C;
 }
 .card-img-top {
     width: 100%;       /* картинка растягивается по ширине карточки */
