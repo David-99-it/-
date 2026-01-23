@@ -4,14 +4,13 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
 <div class="back">
 <div class="hero-image">
     <div class="overlay">
         <div class="hero-text">
             <h1 class="h1_1">Добро пожаловать на сайт МУЦА</h1>
             <p>International University of Central Asia</p>
-    <button class="statement">Подать заявление</button>
+    <button class="statement" onclick="location.href='{% url 'apply' %}'">Подать заявление</button>
         </div>
     </div>
 </div>
