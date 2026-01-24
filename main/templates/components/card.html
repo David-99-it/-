@@ -1,0 +1,29 @@
+{% load static %}
+<div class="card custom-card" style="width: 45rem;">
+  <div class="card-body">
+    <h5 class="card-title custom-title">
+      <i class="bi bi-hand-thumbs-up custom-icon"></i>
+      {{ title }}
+    </h5>
+
+    <hr class="gold-line1">
+
+    <p class="card-text custom-text">
+      {{ short_text }}
+      {% if full_text %}
+      <span class="more-text" style="display:none;">
+        {{ full_text }}
+      </span>
+      {% endif %}
+    </p>
+
+    {% if full_text %}
+    <button class="btn btn-warning btn-sm" onclick="toggleText(this)">
+      Читать подробнее
+    </button>
+    {% endif %}
+  </div>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+

@@ -54,7 +54,7 @@ html {
     padding-top: 120px;  /* управляет положением текста */
     text-align: center;
 }
-.gold-line {
+.gold-line, .gold-line1{
     height: 4px; /* толщина линии */
     width: 75%; /* длина линии */
     background-color: #FFB300; /* насыщенный тёмно-жёлтый */
@@ -62,7 +62,16 @@ html {
     box-shadow: 0 0 8px #FFB300, 0 0 15px #FFB300; /* лёгкое свечение */
     margin: 10px auto 30px; /* отступы сверху/снизу и центрирование */
 }
+.gold-line1{
+    width: 90%;
+}
+.more-text {
+    display: none;
+}
 
+.dignity{
+    background-color: #2D405C;
+}
 
 /* Hero блок "О МУЦА" */
 .hero1-image {
@@ -81,6 +90,9 @@ html {
 .back{
    background-color: #f2f2f2; /* светло-сероватый */
     padding-bottom: 50px;
+}
+.icon-text {
+    font-size: 22px;   /* увеличивай как нужно */
 }
 
 .h2_1{
@@ -236,6 +248,42 @@ button.statement:active {
     object-position: center center; /* центрируем картинку при обрезке */
 }
 
+.dignity{
+    display: flex;
+    padding: 8%;
+    flex-direction: column;
+}
+.dignity h1{
+    text-align: center;
+    color: white;
+}
+.structure h1{
+    text-align: center;
+    color: #2D405C;
+}
+.structure {
+    margin: 8%;
+}
+/* Размер и цвет иконки */
+.custom-icon {
+  color: #FFC107;       /* темно-желтая */
+  font-size: 28px;      /* больше чем раньше */
+  vertical-align: middle;
+}
+
+/* Заголовок карточки */
+.custom-title {
+  font-size: 24px;      /* увеличенный размер */
+  color: #2D405C;       /* темно-синий цвет */
+  font-weight: bold;
+}
+
+/* Текст карточки */
+.custom-text {
+  font-size: 18px;      /* размер текста */
+  color: #333333;       /* темно-серый для удобного чтения */
+  line-height: 1.5;     /* для лучшей читаемости */
+}
 
 .points {
     display: flex;
@@ -375,6 +423,26 @@ button.statement:active {
     color: #777;
     margin-bottom: 15px;
 }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд */
+  gap: 20px; /* расстояние между карточками */
+  justify-items: center; /* центрируем карточки в ячейках */
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 1700px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* 1 колонка */
+    gap: 15px; /* уменьшаем отступ */
+  }
+
+  .cards-grid .card {
+    width: 90%; /* уменьшаем ширину карточки */
+  }
+}
+
 @media (max-width: 1200px) {
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -385,12 +453,15 @@ button.statement:active {
     .news-grid {
         grid-template-columns: 1fr;
     }
-
     .news-section {
         padding: 0 6%;
     }
 }
-
+@media (max-width: 800px) {
+    .cards-grid .card{
+        max-width: 400px;
+    }
+}
 /* Адаптивность */
 @media (max-width: 992px) {
     .hero-image { height: 45vh; }
