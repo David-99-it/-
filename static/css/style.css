@@ -19,19 +19,23 @@ html {
     outline: 3px solid #FFD700;
     border-radius: 10px;
 }
-.hero2-image .hero-text {
-    padding-top: 100px; /* смещаем текст вниз */
+.hero2-image .hero-text, .hero3-image .hero-text, .hero4-image .hero-text {
+    padding-top: 80px; /* смещаем текст вниз */
     text-align: center;
 }
 .hero1-image .hero-text .h1_2,
-.hero2-image .hero-text .h1_2 {
+.hero2-image .hero-text .h1_2,
+.hero3-image .hero-text .h1_2,
+.hero4-image .hero-text .h1_2,
+.hero5-image .hero-text .h1_2 
+{
     font-size: 60px;   /* размер текста */
     color: white;      /* цвет текста */
     margin: 0;         /* убираем дефолтные отступы h1 */
 }
 
 /* Hero секция прямо под navbar */
-.hero2-image {
+.hero2-image, .hero3-image, .hero4-image, .hero5-image{
     width: 100%;
     height: 50vh;                              /* занимает половину экрана */
     background-image: url('../img/Шляпы.webp'); /* путь к картинке */
@@ -44,7 +48,17 @@ html {
     border-radius: 0;
     box-shadow: none;
 }
-.hero2-image .overlay , .hero1-image .overlay{
+.hero3-image{
+    background-image: url('../img/Вакансии.jpg');
+}
+.hero4-image{
+    background-image: url('../img/Заявление.png');
+}
+.hero5-image{
+    background-image: url('../img/Вакансии1.jpg');
+}
+.hero2-image .overlay , .hero1-image .overlay, .hero3-image .overlay,
+.hero4-image .overlay, .hero5-image .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -67,6 +81,18 @@ html {
 }
 .more-text {
     display: none;
+}
+
+.apply-info {
+  max-width: 700px;
+  margin: 20px auto 30px;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #2D405C;
+}
+
+.apply-info li {
+  margin-bottom: 10px;
 }
 
 .dignity{

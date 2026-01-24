@@ -1,4 +1,5 @@
 from news.models import News
+from jobs.models import Vacancy
 from django.shortcuts import render, get_object_or_404
 
 def home(request):
@@ -21,8 +22,12 @@ def news_list(request):
 def jobs(request):
     return render(request, 'main/jobs.html')
 
-def science(request):
-    return render(request, 'main/science.html')
+def jobs(request):
+    vacancies = Vacancy.objects.filter(is_active=True).order_by('-created_at')
+    return render(request, 'main/jobs.html', {
+        'vacancies': vacancies
+    })
 
-def courses(request):
-    return render(request, 'main/courses.html')
+def vacancy_apply(request):
+    # просто покажем страницу с формой Google
+    return render(request, 'main/vacancy_apply.html')
