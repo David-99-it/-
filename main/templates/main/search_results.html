@@ -1,0 +1,40 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<h2>Результаты поиска</h2>
+
+{% if query %}
+<p>Вы искали: "<b>{{ query }}</b>"</p>
+{% endif %}
+
+{% if news_results or vacancy_results %}
+
+{% if news_results %}
+<h3>Новости:</h3>
+<ul class="list-group">
+    {% for news in news_results %}
+    <li class="list-group-item">
+        <strong>{{ news.title }}</strong><br>
+        {{ news.text|truncatewords:30 }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% if vacancy_results %}
+<h3>Вакансии:</h3>
+<ul class="list-group">
+    {% for vac in vacancy_results %}
+    <li class="list-group-item">
+        <strong>{{ vac.title }}</strong><br>
+        {{ vac.description|truncatewords:30 }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% else %}
+<p>Ничего не найдено.</p>
+{% endif %}
+
+{% endblock %}
