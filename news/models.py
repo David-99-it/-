@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary_storage.storage import MediaCloudinaryStorage
 
 class News(models.Model):
     title = models.CharField("Заголовок", max_length=200)

@@ -1,5 +1,6 @@
 
 from django.db import models
+from cloudinary_storage.storage import MediaCloudinaryStorage
 
 class Vacancy(models.Model):
     title = models.CharField("Название вакансии", max_length=200)
