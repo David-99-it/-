@@ -1,7 +1,8 @@
-from pathlib import Path
-from dotenv import load_dotenv
 import os
 import dj_database_url
+from pathlib import Path
+from dotenv import load_dotenv
+
 
 load_dotenv()
 
@@ -26,7 +27,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'cloudinary_storage',
 ]
-# Для миграции медиа на Cloudinary
+# Для загрузки на Cloudinary
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CLOUDINARY_STORAGE = {
