@@ -1,17 +1,3 @@
-/* Hero секция прямо под navbar */
-.hero-image {
-    width: 100%;
-    height: 50vh;                     /* занимает половину экрана */
-    background-image: url('../img/Студенты2.jpg'); /* путь к картинке */
-    background-size: cover;           /* картинка растягивается */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;     /* параллакс */
-    position: relative;
-    overflow: hidden;
-    border-radius: 0;                 /* без скругления, можно оставить */
-    box-shadow: none;                 /* без тени */
-}
 html {
     scroll-behavior: smooth;
 }
@@ -35,7 +21,7 @@ html {
 }
 
 /* Hero секция прямо под navbar */
-.hero2-image, .hero3-image, .hero4-image, .hero5-image{
+.hero-image, .hero1-image, .hero2-image, .hero3-image, .hero4-image, .hero5-image{
     width: 100%;
     height: 50vh;                              /* занимает половину экрана */
     background-image: url('../img/Шляпы.webp'); /* путь к картинке */
@@ -47,6 +33,13 @@ html {
     overflow: hidden;
     border-radius: 0;
     box-shadow: none;
+    margin-top: -10px;
+}
+.hero-image{
+    background-image: url('../img/Студенты2.jpg');
+}
+.hero1-image{
+    background-image: url('../img/Новости1.jpg');
 }
 .hero3-image{
     background-image: url('../img/Вакансии.jpg');
@@ -99,20 +92,6 @@ html {
     background-color: #2D405C;
 }
 
-/* Hero блок "О МУЦА" */
-.hero1-image {
-    width: 100%;
-    height: 50vh;                              /* занимает половину экрана */
-    background-image: url('../img/Новости1.jpg'); /* путь к картинке */
-    background-size: cover;                     /* растягиваем картинку */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;              /* параллакс */
-    position: relative;
-    overflow: hidden;
-    border-radius: 0;
-    box-shadow: none;
-}
 .back{
    background-color: #f2f2f2; /* светло-сероватый */
     padding-bottom: 50px;
